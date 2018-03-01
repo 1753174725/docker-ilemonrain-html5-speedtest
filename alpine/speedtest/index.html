@@ -14,12 +14,8 @@
 		text-align:center;
 		font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
 	}
-	a  {
+	a{
 		color: #777;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #6060AA;
 		text-decoration: none;
 	}
 	h1{
@@ -51,7 +47,7 @@
 		content:"开始测试";
 	}
 	#startStopBtn.running:before{
-		content:"取消测试";
+		content:"停止测试";
 	}
 	#test{
 		margin-top:2em;
@@ -256,7 +252,7 @@ function initUI(){
 			<div class="unit">ms</div>
 		</div>
 		<div class="testArea">
-			<div class="testName">延迟抖动 Jitter</div>
+			<div class="testName">网络抖动 Jitter</div>
 			<canvas id="jitMeter" class="meter"></canvas>
 			<div id="jitText" class="meterText"></div>
 			<div class="unit">ms</div>

@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER iLemonrain <ilemonrain@ilemonrain.com>
 
-RUN (apk update && apk upgrade ;\
+RUN (apk --no-cache upgrade ;\
      apk add php7-apache2 curl php7-cli php7-json php7-phar php7-openssl php7-mbstring php7-zlib ;\
      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer ;\
      sed -i "s/AllowOverride none/AllowOverride All/" /etc/apache2/httpd.conf ;\
