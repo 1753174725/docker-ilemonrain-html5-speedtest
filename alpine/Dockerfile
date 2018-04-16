@@ -1,5 +1,6 @@
 FROM alpine
-MAINTAINER iLemonrain <ilemonrain@ilemonrain.com>
+
+LABEL MAINTAINER iLemonrain <ilemonrain@ilemonrain.com>
 
 RUN (apk --no-cache upgrade ;\
      apk add php7-apache2 curl php7-cli php7-json php7-phar php7-openssl php7-mbstring php7-zlib ;\
@@ -17,4 +18,4 @@ RUN (chown -R apache:apache /var/www/localhost/htdocs/ ;\
 
 EXPOSE 80
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT [ "sh", "/entrypoint.sh" ]
